@@ -346,8 +346,8 @@ export default class Bubble<
       isSameDay(currentMessage, nextMessage)
     ) {
       return [
-        styles[position].containerToNext,
-        containerToNextStyle && containerToNextStyle[position],
+        styles['left'].containerToNext,
+        containerToNextStyle && containerToNextStyle['left'],
       ]
     }
     return null
@@ -368,8 +368,8 @@ export default class Bubble<
       isSameDay(currentMessage, previousMessage)
     ) {
       return [
-        styles[position].containerToPrevious,
-        containerToPreviousStyle && containerToPreviousStyle[position],
+        styles['left'].containerToPrevious,
+        containerToPreviousStyle && containerToPreviousStyle['left'],
       ]
     }
     return null
@@ -465,7 +465,7 @@ export default class Bubble<
         <View
           style={[
             styles.content.parentMessageWrapper,
-            parentMessageWrapperStyle && parentMessageWrapperStyle[position],
+            parentMessageWrapperStyle && parentMessageWrapperStyle['left'],
           ]}
         >
           {currentMessage?.parent?.name ? (
@@ -473,7 +473,7 @@ export default class Bubble<
               style={
                 [
                   styles.content.parentUsername,
-                  parentUsernameStyle && parentUsernameStyle[position],
+                  parentUsernameStyle && parentUsernameStyle['left'],
                 ] as TextStyle
               }
             >
@@ -487,7 +487,7 @@ export default class Bubble<
             style={
               [
                 styles.content.parentText,
-                parentTextStyle && parentTextStyle[position],
+                parentTextStyle && parentTextStyle['left'],
               ] as TextStyle
             }
           >
@@ -495,7 +495,7 @@ export default class Bubble<
               style={
                 [
                   styles.content.parentText,
-                  parentTextStyle && parentTextStyle[position],
+                  parentTextStyle && parentTextStyle['left'],
                 ] as TextStyle
               }
               parse={[
@@ -667,16 +667,16 @@ export default class Bubble<
         <></>
         <View
           style={[
-            styles[position].container,
-            containerStyle && containerStyle[position],
+            styles['left'].container,
+            containerStyle && containerStyle['left'],
           ]}
         >
           <View
             style={[
-              styles[position].wrapper,
+              styles['left'].wrapper,
               this.styledBubbleToNext(),
               this.styledBubbleToPrevious(),
-              wrapperStyle && wrapperStyle[position],
+              wrapperStyle && wrapperStyle['left'],
             ]}
           >
             <TouchableWithoutFeedback
@@ -689,8 +689,8 @@ export default class Bubble<
                 {this.renderBubbleContent()}
                 <View
                   style={[
-                    styles[position].bottom,
-                    bottomContainerStyle && bottomContainerStyle[position],
+                    styles['left'].bottom,
+                    bottomContainerStyle && bottomContainerStyle['left'],
                   ]}
                 >
                   {this.renderTime()}
